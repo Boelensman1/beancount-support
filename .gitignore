@@ -1,0 +1,7 @@
+for-import
+node_modules
+__pycache__
+db.json
+secrets.ts
+csv-grabbers/db.json
+*.numbers
