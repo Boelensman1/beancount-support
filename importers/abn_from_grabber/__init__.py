@@ -11,7 +11,7 @@ def parseAbnNarration(transactionType, narration):
     if narrationSplit[0].startswith('BEA'):
         return re.sub(r' {2,}', ' ',re.sub(r',([^\d ])',', \1',narrationSplit[1])).strip() + ", " + narrationSplit[3]
 
-    if narrationSplit[0] == 'SEPA Overboeking' or transactionType == '944' or transactionType == '654':
+    if narrationSplit[0] == 'SEPA Overboeking' or transactionType == '944' or transactionType == '654' or transactionType =='411':
         match = re.search(r'Omschrijving: ([^:]*)(?:\s*Kenmerk:|$)', narration)
         if match:
             # Split the match result into lines
